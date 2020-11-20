@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #357b70;
+    --secondary-color: #05676e;
+    --tertiary-color: #489c79;
+    --text-color: #fff;
+    --black-color: #0c0b0a;
+    --green-color: #39ec29;
+    --pink-color: #f71473ee;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    font-family: 'Trispace', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+a {
+    color: var(--red-color)
+}
+
+
+/* a:visited {
+    color: #1a086d;
+} */
+
+a:hover {
+    color: var(--pink-color)
+}
+
+a:active {
+    color: var(--green-color);
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    background-color: #e72b2b;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 4px;
+    border-bottom: 3px solid rgba(31, 110, 184, 0.3);
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    clear: both;
+    /* display: flex; */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 350px 350px;
+}
+
+.grid__item {
+    background-color: lightblue;
+}
+
+footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: var(--black-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+} */
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .grid__item:last-child {
+        grid-column: auto/ auto;
+        grid-row: auto/auto;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media all and (min-width:500) and (max-width:750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px
+    }
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto /auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.container {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 30px;
+}
+
+.button {
+    border: none;
+    font-family: inherit;
+    background-color: #05676e;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #03474c;
+    transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+    margin-top: 100px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button2:hover {
+    background-color: #489c79;
+}
+
+.button3:hover {
+    font-size: 18px;
+}
+
+.AboutMe {
+    text-align: center;
+}
+
+.skills {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.island {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@keyframes color-change {
+    0% {
+        fill: rgba(0, 47, 255, 0.836);
+    }
+    50% {
+        fill: rgb(241, 4, 16);
+    }
+    100% {
+        fill: rgb(12, 235, 160);
+    }
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+}
